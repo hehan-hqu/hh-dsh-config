@@ -43,8 +43,6 @@
 
 | 插件 | 版本 | 用途 |
 | --- | --- | --- |
-| `@deepseek-ai/dsh-base` | — | 基础包 |
-| `@deepseek-ai/dsh-web-app` | — | Web 应用壳 |
 | `dshmarket` | ^1.66.14 | 插件市场 |
 | `dsh-better-edit` | 1.0.0 | 增强编辑。**已禁用**，`plugins/` 本体未入库 |
 | `billion-context` | 0.1.189 | 上下文压缩（ACP） |
