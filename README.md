@@ -10,7 +10,6 @@
 | `cordis.patch.yml` | `~/.dsh/cordis.patch.yml` | 全局补丁层。当前只含 codegraph MCP 的自动托管段 |
 | `profiles/desktop/` | `~/.dsh/profiles/desktop/` | 桌面端 profile。核心是 `cordis.patch.yml` 与 `package.json` |
 | `profiles/web/` | `~/.dsh/profiles/web/` | Web 端 profile。结构与 desktop 相同 |
-| `plugins/dsh-better-edit/` | `~/.dsh/plugins/dsh-better-edit/` | 本地插件本体：`config.yaml`、README、`code/` 下的三个 skill 文档 |
 
 各 profile 目录内的文件分工：
 
@@ -35,14 +34,8 @@
    cd $DSH_HOME/profiles/desktop && pnpm install
    cd $DSH_HOME/profiles/web && pnpm install
    ```
-4. 复制本地插件（未上市场，不走 pnpm）：
-   ```bash
-   mkdir -p $DSH_HOME/plugins/dsh-better-edit/code
-   cp plugins/dsh-better-edit/config.yaml plugins/dsh-better-edit/README.md plugins/dsh-better-edit/README.zh.md $DSH_HOME/plugins/dsh-better-edit/
-   cp plugins/dsh-better-edit/code/*.md $DSH_HOME/plugins/dsh-better-edit/code/
-   ```
-5. 设置环境变量 `ZAI_CODING_CN_API_KEY`。三个 glm MCP 服务器的鉴权头都引用它（`cordis.patch.yml` 中的 `!!js` 表达式），没有这个变量 MCP 会 401。
-6. 重启 DSH 使补丁层生效。
+4. 设置环境变量 `ZAI_CODING_CN_API_KEY`。三个 glm MCP 服务器的鉴权头都引用它（`cordis.patch.yml` 中的 `!!js` 表达式），没有这个变量 MCP 会 401。
+5. 重启 DSH 使补丁层生效。
 
 ## 已安装插件清单
 
@@ -53,7 +46,7 @@
 | `@deepseek-ai/dsh-base` | — | 基础包 |
 | `@deepseek-ai/dsh-web-app` | — | Web 应用壳 |
 | `dshmarket` | ^1.66.14 | 插件市场 |
-| `dsh-better-edit` | 1.0.0 | 增强编辑（read/write/edit 带 hash 锚点）；本地插件，同时存在于 `plugins/` |
+| `dsh-better-edit` | 1.0.0 | 增强编辑。**已禁用**，`plugins/` 本体未入库 |
 | `billion-context` | 0.1.189 | 上下文压缩（ACP） |
 | `@wxg-prc-cpg/browser-skill-dsh-plugin` | 0.3.2 | 浏览器技能 |
 | `dsh-plugin-message-edit` | 1.2.1 | 消息编辑 |
@@ -71,7 +64,7 @@
 
 - 模型与 API 配置。desktop 补丁中的 `agent-default-model`、`llm-pi-ai`、`llm-deepseek-account` 三段已删除。恢复后需在 DSH 设置界面手动配置模型。
 - 凭据。`~/.dsh/.credentials.yaml` 与一切 API key 不入库。
-- 运行时数据。会话（`sessions/`）、用量账单（`.dsh-usage-*.json`）、日志（`logs/`）、存储（`storages/`）、任务看板数据（`task-board/`）、插件运行缓存（`plugins/*/runtime/`）均不含。
+- 运行时数据。会话（`sessions/`）、用量账单（`.dsh-usage-*.json`）、日志（`logs/`）、存储（`storages/`）、任务看板数据（`task-board/`）均不含。已禁用的本地插件 `plugins/dsh-better-edit/` 不含。
 - `cordis.patch.yml.bak-*` 备份文件不含。
 
 ## 更新本仓库
