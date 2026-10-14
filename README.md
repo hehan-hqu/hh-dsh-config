@@ -6,9 +6,8 @@
 
 | 路径 | 来源（本机绝对路径） | 说明 |
 | --- | --- | --- |
-| `AGENTS.md` | `~/.dsh/AGENTS.md` | 全局 agent 指令。DSH 会把它注入每个会话 |
-| `cordis.patch.yml` | `~/.dsh/cordis.patch.yml` | 全局补丁层。当前只含 codegraph MCP 的自动托管段 |
-| `profiles/desktop/` | `~/.dsh/profiles/desktop/` | 桌面端 profile。核心是 `cordis.patch.yml` 与 `package.json` |
+| `global/AGENTS.md` | `~/.dsh/AGENTS.md` | 全局 agent 指令。DSH 会把它注入每个会话 |
+| `global/cordis.patch.yml` | `~/.dsh/cordis.patch.yml` | 全局补丁层。当前只含 codegraph MCP 的自动托管段 |
 | `profiles/web/` | `~/.dsh/profiles/web/` | Web 端 profile。结构与 desktop 相同 |
 
 各 profile 目录内的文件分工：
@@ -25,8 +24,8 @@
 
 1. 复制全局文件：
    ```bash
-   cp AGENTS.md $DSH_HOME/AGENTS.md
-   cp cordis.patch.yml $DSH_HOME/cordis.patch.yml
+   cp global/AGENTS.md $DSH_HOME/AGENTS.md
+   cp global/cordis.patch.yml $DSH_HOME/cordis.patch.yml
    ```
 2. 复制两个 profile 的四个文件（`package.json`、`cordis.patch.yml`、`cordis.yml`、`pnpm-workspace.yaml`）到 `$DSH_HOME/profiles/desktop/` 与 `$DSH_HOME/profiles/web/`。若想锁定版本，连同 `pnpm-lock.yaml` 一起复制。
 3. 安装插件（在各自 profile 目录内执行）：
