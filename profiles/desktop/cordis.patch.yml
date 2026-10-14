@@ -1,0 +1,76 @@
+# Your patch layer for this dsh profile, applied after every bundle layer:
+# a top-level YAML array of loader patch entries (id-targeted config
+# overrides, disables, and insert lists; `!!js` expressions allowed).
+# NOTE: model/provider entries (agent-default-model, llm-pi-ai, llm-deepseek-account)
+# were intentionally removed from this synced copy.
+- id: ui-settings-general
+  name: '@deepseek-ai/dsh-client-ui-settings-general'
+  config:
+    welcomeNoticeVersion: 2026-08-13.1
+- id: ui-chat
+  name: '@deepseek-ai/dsh-client-ui-chat'
+  config:
+    transcriptView: standard
+    performanceUsage: detailed
+- id: ui-settings
+  name: '@deepseek-ai/dsh-client-ui-settings'
+  config:
+    enabled: true
+- id: ui-settings-account
+  name: '@deepseek-ai/dsh-client-ui-settings-account'
+  config:
+    version: 1
+    step: done
+    usage: detailed
+    developerTools: true
+    purpose: null
+    process: standard
+    completion: api-key
+- id: mcp-glm-search
+  name: '@deepseek-ai/dsh-mcp-client'
+  config:
+    serverName: glm-search
+    transport: streamable-http
+    url: https://open.bigmodel.cn/api/mcp/web_search_prime/mcp
+    headers:
+      Authorization: !!js '`Bearer ${process.env.ZAI_CODING_CN_API_KEY}`'
+- id: mcp-glm-reader
+  name: '@deepseek-ai/dsh-mcp-client'
+  config:
+    serverName: glm-reader
+    transport: streamable-http
+    url: https://open.bigmodel.cn/api/mcp/web_reader/mcp
+    headers:
+      Authorization: !!js '`Bearer ${process.env.ZAI_CODING_CN_API_KEY}`'
+- id: mcp-glm-zread
+  name: '@deepseek-ai/dsh-mcp-client'
+  config:
+    serverName: glm-zread
+    transport: streamable-http
+    url: https://open.bigmodel.cn/api/mcp/zread/mcp
+    headers:
+      Authorization: !!js '`Bearer ${process.env.ZAI_CODING_CN_API_KEY}`'
+- id: tool-web
+  name: '@deepseek-ai/dsh-tool-web'
+  config:
+    search: false
+    fetch: true
+- id: permission
+  name: '@deepseek-ai/dsh-permission-presets'
+  config:
+    presets:
+      read-only:
+        sandbox: read-only
+        approval: ask
+      workspace-write:
+        sandbox: workspace-write
+        approval: ask
+      danger-full-access:
+        sandbox: danger-full-access
+        approval: never
+    defaultPreset: danger-full-access
+- id: ui-theme
+  name: "@deepseek-ai/dsh-client-ui-theme"
+  config:
+    preference: dark
+    fontSize: 16

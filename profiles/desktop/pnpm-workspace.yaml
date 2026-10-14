@@ -1,0 +1,21 @@
+packages:
+  - .
+
+nodeLinker: hoisted
+autoInstallPeers: false
+minimumReleaseAgeExclude:
+  - billion-context@0.1.188 || 0.1.189
+  - dshmarket@1.66.14
+  - dsh-cost-meter@1.8.16
+  - dsh-mnemon-provider-mnemon-native@0.5.9
+  - dsh-mnemon-source-documents@0.5.10
+  - dsh-mnemon-source-memory-spaces@0.5.17
+  - dsh-mnemon-source-runtime@0.5.13
+  - dsh-mnemon-strategy-default-three-tier@0.5.8
+  - dsh-mnemon@0.5.25
+  - '@hyzyn/dsh-codegraph@0.6.7'
+  - '@michengai/dsh-automation@0.1.61'
+  - dsh-mnemon-source-runtime@0.5.14
+  - dsh-mnemon@0.5.26
+allowBuilds:
+  cloudflared: true

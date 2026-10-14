@@ -1,0 +1,39 @@
+{
+  "name": "dsh-profile-desktop",
+  "private": true,
+  "dependencies": {
+    "@hyzyn/dsh-codegraph": "0.6.7",
+    "@kenz1117/dsh-ui-usage-billing": "1.4.25",
+    "@linxin666/dsh-client-ui-task-board": "0.4.5",
+    "@linxin666/dsh-remote-web-ui": "0.4.5",
+    "@michengai/dsh-automation": "0.1.61",
+    "@wxg-prc-cpg/browser-skill-dsh-plugin": "0.3.2",
+    "billion-context": "0.1.189",
+    "dsh-better-edit": "1.0.0",
+    "dsh-better-sidebar": "0.24.1",
+    "dsh-mnemon": "0.5.26",
+    "dsh-notify-me": "1.5.3",
+    "dsh-plugin-message-edit": "1.2.1",
+    "dshmarket": "^1.66.14"
+  },
+  "dsh": {
+    "profile": {
+      "bundles": [
+        "@deepseek-ai/dsh-base",
+        "@deepseek-ai/dsh-web-app",
+        "dshmarket",
+        "dsh-better-edit",
+        "billion-context",
+        "@wxg-prc-cpg/browser-skill-dsh-plugin",
+        "dsh-plugin-message-edit",
+        "@linxin666/dsh-remote-web-ui",
+        "@linxin666/dsh-client-ui-task-board",
+        "@kenz1117/dsh-ui-usage-billing",
+        "dsh-mnemon",
+        "dsh-notify-me",
+        "@hyzyn/dsh-codegraph",
+        "@michengai/dsh-automation"
+      ]
+    }
+  }
+}

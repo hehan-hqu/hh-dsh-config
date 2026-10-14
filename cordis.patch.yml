@@ -1,0 +1,14 @@
+
+# --- dsh-codegraph mcp managed (auto-generated; do not edit) ---
+- insert:
+    - id: mcp-codegraph-managed
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: codegraph
+        transport: stdio
+        command: codegraph
+        args:
+          - serve
+          - '--mcp'
+        cwd: /Users/hehan/Code/work
+# --- end dsh-codegraph mcp managed ---
