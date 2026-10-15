@@ -2,19 +2,23 @@
   "name": "dsh-profile-desktop",
   "private": true,
   "dependencies": {
-    "@hyzyn/dsh-codegraph": "0.6.7",
-    "@kenz1117/dsh-ui-usage-billing": "1.4.25",
-    "@linxin666/dsh-client-ui-task-board": "0.4.5",
-    "@linxin666/dsh-remote-web-ui": "0.4.5",
-    "@michengai/dsh-automation": "0.1.61",
+    "@anionex/dsh-computer-use": "0.3.3",
+    "@hyzyn/dsh-codegraph": "0.6.8",
+    "@kenz1117/dsh-ui-usage-billing": "1.4.30",
+    "@linxin666/dsh-client-ui-task-board": "0.4.6",
+    "@linxin666/dsh-remote-web-ui": "0.4.6",
+    "@michengai/dsh-automation": "0.1.64",
+    "@michengai/dsh-skills-manager": "1.1.19",
     "@wxg-prc-cpg/browser-skill-dsh-plugin": "0.3.2",
-    "billion-context": "0.1.189",
+    "billion-context": "0.1.197",
     "dsh-better-edit": "1.0.0",
-    "dsh-better-sidebar": "0.24.1",
-    "dsh-mnemon": "0.5.26",
+    "dsh-better-sidebar": "0.26.0",
+    "dsh-find-plugins": "0.2.10",
+    "dsh-image-gen": "0.9.0",
+    "dsh-mnemon": "0.5.29",
     "dsh-notify-me": "1.5.3",
     "dsh-plugin-message-edit": "1.2.1",
-    "dshmarket": "^1.66.14"
+    "dshmarket": "^1.66.21"
   },
   "dsh": {
     "profile": {
@@ -32,7 +36,12 @@
         "dsh-mnemon",
         "dsh-notify-me",
         "@hyzyn/dsh-codegraph",
-        "@michengai/dsh-automation"
+        "@michengai/dsh-automation",
+        "dsh-better-sidebar",
+        "@anionex/dsh-computer-use",
+        "dsh-find-plugins",
+        "dsh-image-gen",
+        "@michengai/dsh-skills-manager"
       ]
     }
   }

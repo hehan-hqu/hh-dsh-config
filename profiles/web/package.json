@@ -2,7 +2,8 @@
   "name": "dsh-profile-web",
   "private": true,
   "dependencies": {
-    "ds-harness-remote": "0.4.27"
+    "ds-harness-remote": "0.4.27",
+    "dsh-web-fetch-proxy": "github:1499501762/dsh-web-fetch-proxy"
   },
   "dsh": {
     "profile": {

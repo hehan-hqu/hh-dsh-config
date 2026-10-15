@@ -11,6 +11,9 @@ importers:
       ds-harness-remote:
         specifier: 0.4.27
         version: 0.4.27
+      dsh-web-fetch-proxy:
+        specifier: github:1499501762/dsh-web-fetch-proxy
+        version: https://codeload.github.com/1499501762/dsh-web-fetch-proxy/tar.gz/9145719dcb041e496010bd7f6704b848e81ac41b(@deepseek-ai/schemastery@3.18.4)
 
 packages:
 
@@ -219,6 +222,22 @@ packages:
       '@deepseek-ai/dsh-client-ui-sidebar':
         optional: true
       '@deepseek-ai/dsh-client-ui-slots':
+        optional: true
+
+  dsh-web-fetch-proxy@https://codeload.github.com/1499501762/dsh-web-fetch-proxy/tar.gz/9145719dcb041e496010bd7f6704b848e81ac41b:
+    resolution: {gitHosted: true, integrity: sha512-WXX5zapI44OB03HYa9oO6rrTQPtkXiAl2de8SPg7zkUzKX6CUNnqMpPkYdyjjzn6pIkB2TZToRnyF9XZXto96A==, tarball: https://codeload.github.com/1499501762/dsh-web-fetch-proxy/tar.gz/9145719dcb041e496010bd7f6704b848e81ac41b}
+    version: 0.2.0
+    engines: {node: '>=20.18.1'}
+    peerDependencies:
+      '@deepseek-ai/dsh-http-proxy': '>=0.1.5-rc.2'
+      '@deepseek-ai/dsh-launch-environment': '>=0.1.5-rc.2'
+      '@deepseek-ai/schemastery': '>=3.18.2'
+    peerDependenciesMeta:
+      '@deepseek-ai/dsh-http-proxy':
+        optional: true
+      '@deepseek-ai/dsh-launch-environment':
+        optional: true
+      '@deepseek-ai/schemastery':
         optional: true
 
   emoji-regex@8.0.0:
@@ -596,6 +615,10 @@ snapshots:
       - bufferutil
       - supports-color
       - utf-8-validate
+
+  dsh-web-fetch-proxy@https://codeload.github.com/1499501762/dsh-web-fetch-proxy/tar.gz/9145719dcb041e496010bd7f6704b848e81ac41b(@deepseek-ai/schemastery@3.18.4):
+    optionalDependencies:
+      '@deepseek-ai/schemastery': 3.18.4
 
   emoji-regex@8.0.0: {}
 

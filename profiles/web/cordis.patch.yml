@@ -1,0 +1,31 @@
+# Your patch layer for this dsh profile, applied after every bundle layer:
+# a top-level YAML array of loader patch entries (id-targeted config
+# overrides, disables, and insert lists; `!!js` expressions allowed).
+- id: mcp-glm-search
+  name: '@deepseek-ai/dsh-mcp-client'
+  config:
+    serverName: glm-search
+    transport: streamable-http
+    url: https://open.bigmodel.cn/api/mcp/web_search_prime/mcp
+    headers:
+      Authorization: !!js '`Bearer ${process.env.ZAI_CODING_CN_API_KEY}`'
+- id: mcp-glm-reader
+  name: '@deepseek-ai/dsh-mcp-client'
+  config:
+    serverName: glm-reader
+    transport: streamable-http
+    url: https://open.bigmodel.cn/api/mcp/web_reader/mcp
+    headers:
+      Authorization: !!js '`Bearer ${process.env.ZAI_CODING_CN_API_KEY}`'
+- id: mcp-glm-zread
+  name: '@deepseek-ai/dsh-mcp-client'
+  config:
+    serverName: glm-zread
+    transport: streamable-http
+    url: https://open.bigmodel.cn/api/mcp/zread/mcp
+    headers:
+      Authorization: !!js '`Bearer ${process.env.ZAI_CODING_CN_API_KEY}`'
+- id: ui-settings-general
+  name: "@deepseek-ai/dsh-client-ui-settings-general"
+  config:
+    welcomeNoticeVersion: 2026-09-28.1

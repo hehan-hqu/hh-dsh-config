@@ -74,3 +74,33 @@
   config:
     preference: dark
     fontSize: 16
+- id: computer-use
+  name: "@anionex/dsh-computer-use"
+  config:
+    observationTtlMs: 0
+    interaction:
+      focusPolicy: preserve
+      keyboardPolicy: activate
+      pointerInputPolicy: targeted
+      cursorVisualization: visible
+      cursorSpeedPxPerSecond: 1600
+      cursorAccelerationPxPerSecondSquared: 6000
+      cursorClickDelayMs: 90
+      cursorAutoHideMs: 0
+    confirmationTtlMs: 300000
+    actionTimeoutMs: 15000
+    settleMs: 250
+    maxSettleMs: 5000
+    maxNodes: 500
+    maxDepth: 14
+    maxTextBytes: 64000
+    maxScreenshotBytes: 33554432
+    artifactRoot: .dsh-computer-use/artifacts
+    helper:
+      allowSourceBuild: false
+    allowAllApps: true
+    grants: []
+- id: better-sidebar
+  name: dsh-better-sidebar
+  config:
+    agentOpenTools: true
